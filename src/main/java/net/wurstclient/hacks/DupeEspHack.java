@@ -28,8 +28,8 @@ import net.wurstclient.settings.EnumSetting;
 import net.wurstclient.util.RenderUtils;
 import net.wurstclient.util.RotationUtils;
 
-@SearchTags({"mob esp", "MobTracers", "mob tracers"})
-public final class MobEspHack extends Hack implements UpdateListener,
+@SearchTags({"dupe esp", "DupeTracers", "dupe tracers"})
+public final class DupeEspHack extends Hack implements UpdateListener,
 	CameraTransformViewBobbingListener, RenderListener
 {
 	private final EnumSetting<Style> style =
@@ -48,10 +48,10 @@ public final class MobEspHack extends Hack implements UpdateListener,
 	private int mobBox;
 	private final ArrayList<MobEntity> mobs = new ArrayList<>();
 	
-	public MobEspHack()
+	public DupeEspHack()
 	{
-		super("MobESP", "Highlights nearby mobs.");
-		setCategory(Category.RENDER);
+		super("DupeESP", "Highlights nearby mobs that may be used for duping (llamas and donkeys) Coded by Vapid from https://discord.gg/nr2eNjN.");
+		setCategory(Category.OTHER);
 		addSetting(style);
 		addSetting(boxSize);
 		addSetting(filterInvisible);
@@ -89,7 +89,7 @@ public final class MobEspHack extends Hack implements UpdateListener,
 		
 		Stream<MobEntity> stream =
 			StreamSupport.stream(MC.world.getEntities().spliterator(), false)
-				.filter(e -> e instanceof MobEntity).map(e -> (MobEntity)e)
+				.filter(e -> e instanceof 103,31).map(e -> (103,31)e)
 				.filter(e -> !e.removed && e.getHealth() > 0);
 		
 		if(filterInvisible.isChecked())
@@ -141,7 +141,7 @@ public final class MobEspHack extends Hack implements UpdateListener,
 	{
 		double extraSize = boxSize.getSelected().extraSize;
 		
-		for(MobEntity e : mobs)
+		for(MobEntity e : 103,31)
 		{
 			GL11.glPushMatrix();
 			
