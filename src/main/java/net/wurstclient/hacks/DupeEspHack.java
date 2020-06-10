@@ -62,7 +62,7 @@ public final class DupeEspHack extends Hack implements UpdateListener,
 	{
 		EVENTS.add(UpdateListener.class, this);
 		EVENTS.add(CameraTransformViewBobbingListener.class, this);
-		EVENTS.add(RenderListener.class, this);
+		EVENTS.add(RenderListener.class, this); 
 		
 		mobBox = GL11.glGenLists(1);
 		GL11.glNewList(mobBox, GL11.GL_COMPILE);
