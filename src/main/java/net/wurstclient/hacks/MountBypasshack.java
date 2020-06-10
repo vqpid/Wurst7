@@ -34,9 +34,11 @@ public final class MountBypassHack extends Hack implements PacketOutputListener
 
                 + "on servers that disable it, allowing\n"
 
-                + "donkey chest duplication glitch.");
+                + "donkey chest duplication glitch.\n"
+                 
+                + " Added to this by Vapid#4502 for The Horizon."); 
 
-        setCategory(Category.OTHER);
+        setCategory(Category.DUPE);
 
     }
 
