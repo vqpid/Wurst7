@@ -50,8 +50,8 @@ public final class DupeEspHack extends Hack implements UpdateListener,
 	
 	public DupeEspHack()
 	{
-		super("DupeESP", "Highlights nearby mobs that may be used for duping (llamas and donkeys) Coded by Vapid from https://discord.gg/nr2eNjN.");
-		setCategory(Category.OTHER);
+		super("DupeESP", "Highlights nearby mobs that may be used for duping (llamas and donkeys) Coded by Vapid#4502.");
+		setCategory(Category.DUPE);
 		addSetting(style);
 		addSetting(boxSize);
 		addSetting(filterInvisible);
